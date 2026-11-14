@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ============================================================================
+  Company:       Vesta
+  File:          themes.xml
+  Layer:         Resources / Theme (Modo Claro)
+  ============================================================================
+
+  DESCRIPCIÓN:
+  Tema principal para Modo Claro. Vincula tokens semánticos
+  a los atributos del sistema Android (superficies, barras del sistema, botones).
+
+  ARCHIVOS RELACIONADOS:
+  - values/colors.xml        -> Suministra valores de color.
+  - values-night/themes.xml  -> Equivalente en modo oscuro.
+  ============================================================================
+-->
+<resources>
+    <style name="Base.Theme.Vesta" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Colores Primarios y Marca -->
+        <item name="colorPrimary">@color/blue_primary</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimaryContainer">@color/blue_primary_container</item>
+        <item name="colorOnPrimaryContainer">@color/blue_primary_dark</item>
+
+        <!-- Fondos y Superficies -->
+        <item name="android:colorBackground">@color/background_app</item>
+        <item name="colorSurface">@color/surface_card</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+        <item name="colorSurfaceVariant">@color/surface_variant</item>
+        <item name="colorOnSurfaceVariant">@color/text_secondary</item>
+
+        <!-- Barra de Estado y Navegación del Sistema -->
+        <item name="android:statusBarColor">@color/surface_card</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:navigationBarColor">@color/surface_card</item>
+        <item name="android:windowLightNavigationBar">true</item>
+    </style>
+
+    <style name="Theme.Vesta" parent="Base.Theme.Vesta" />
+</resources>

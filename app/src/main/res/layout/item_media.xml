@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ============================================================================
+  Company:       Vesta
+  File:          item_media.xml
+  Layer:         Resources / Layout (Miniatura Multimedia)
+  ============================================================================
+
+  DESCRIPCIÓN:
+  Elemento visual para el carrusel de fotografías y videos de una propiedad.
+  Incluye contenedor redondeado y soporte para indicador de video.
+
+  ARCHIVOS RELACIONADOS:
+  - MediaAdapter.java            -> Enlaza imágenes con Glide.
+  - Media.java                   -> Modelo de la miniatura.
+  - DetalleInmuebleFragment.java -> Contenedor del carrusel.
+  ============================================================================
+-->
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardElevation="2dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/ivMedia"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+        <TextView
+            android:id="@+id/tvMediaItemName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textAppearance="?attr/textAppearanceBodyMedium"
+            tools:text="Cocina (image)" />
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ============================================================================
+  Company:       Vesta
+  File:          activity_main.xml
+  Layer:         Resources / Layout (Actividad Principal)
+  ============================================================================
+
+  DESCRIPCIÓN:
+  Contenedor raíz de la aplicación. Hospeda el NavHostFragment de navegación
+  y la barra de navegación flotante inferior (BottomNavigationView).
+
+  ARCHIVOS RELACIONADOS:
+  - MainActivity.java  -> Actividad anfitriona asociada.
+  - nav_auth.xml       -> Grafo cargado en NavHostFragment.
+  ============================================================================
+-->
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/background_app">
+
+    <!-- NavHostFragment donde se cargan los fragmentos -->
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:defaultNavHost="true"
+        app:navGraph="@xml/nav_auth" />
+
+    <!-- Contenedor de la píldora flotante -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/bottomNavContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="28dp"
+        app:cardElevation="8dp">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            app:itemIconSize="28dp"
+            app:itemPaddingTop="10dp"
+            app:itemPaddingBottom="10dp"
+            app:itemIconTint="@color/blue_primary"
+            app:labelVisibilityMode="unlabeled"
+            app:menu="@menu/menu_bottom_nav_arrendatario" />
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

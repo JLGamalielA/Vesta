@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ============================================================================
+  Company:       Vesta
+  File:          colors.xml
+  Layer:         Resources / Design System Tokens
+  ============================================================================
+
+  DESCRIPCIÓN:
+  Paleta semántica de diseño corporativo Material 3. Centraliza tokens de color
+  para fondos, superficies, estados, divisores y contrastes de texto.
+
+  ARCHIVOS RELACIONADOS:
+  - themes.xml               -> Define estilos y temas.
+  - fragment_agente_dashboard.xml -> Consume colores de superficie.
+  - item_inmueble.xml        -> Consume colores de tarjetas.
+  ============================================================================
+-->
+<resources>
+    <!-- Colores Base -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="white_80">#CCFFFFFF</color>
+    <color name="transparent">#00000000</color>
+
+    <!-- Marca (Colores Primarios) -->
+    <color name="blue_primary">#2563EB</color>
+    <color name="blue_primary_dark">#1D4ED8</color>
+    <color name="blue_primary_light">#DBEAFE</color>
+    <color name="blue_primary_container">#EFF6FF</color>
+
+    <!-- Superficies y Fondos -->
+    <color name="background_app">#F8FAFC</color>
+    <color name="surface_card">#FFFFFF</color>
+    <color name="surface_variant">#F1F5F9</color>
+    <color name="divider_line">#E2E8F0</color>
+    <color name="border_light">#CBD5E1</color>
+
+    <!-- Tipografía / Textos -->
+    <color name="text_primary">#111827</color>
+    <color name="text_secondary">#4B5563</color>
+    <color name="text_muted">#6B7280</color>
+    <color name="gray_text">#6B7280</color>
+    <color name="gray_hint">#9CA3AF</color>
+
+    <!-- Estados (Disponible, Rentado/Vendido, Cancelado/Error) -->
+    <color name="status_available">#10B981</color>
+    <color name="status_available_bg">#ECFDF5</color>
+    <color name="status_pending">#F59E0B</color>
+    <color name="status_pending_bg">#FFFBEB</color>
+    <color name="status_danger">#DC2626</color>
+    <color name="status_danger_bg">#FEF2F2</color>
+
+    <!-- Chat y Mensajería -->
+    <color name="chat_bubble_me">#2563EB</color>
+    <color name="chat_bubble_other">#F1F5F9</color>
+</resources>

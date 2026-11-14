@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ============================================================================
+  Company:       Vesta
+  File:          menu_filtros.xml
+  Layer:         Resources / Menu (Filtros de Catálogo)
+  ============================================================================
+
+  DESCRIPCIÓN:
+  Opciones del menú emergente PopupMenu para filtrar inmuebles por tipo
+  de operación (Solo Venta, Solo Renta, Todos y Por Rango de Precio).
+
+  ARCHIVOS RELACIONADOS:
+  - AgenteDashboardFragment.java -> Despliega el PopupMenu asociado.
+  - AgenteViewModel.java         -> Aplica filtros seleccionados.
+  ============================================================================
+-->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/filtro_venta"
+        android:title="Solo Venta" />
+    <item
+        android:id="@+id/filtro_renta"
+        android:title="Solo Renta" />
+    <item
+        android:id="@+id/filtro_todos"
+        android:title="Ver Todos" />
+</menu>

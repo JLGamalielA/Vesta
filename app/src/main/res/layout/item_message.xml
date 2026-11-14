@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ============================================================================
+  Company:       Vesta
+  File:          item_message.xml
+  Layer:         Resources / Layout (Burbuja de Mensaje)
+  ============================================================================
+
+  DESCRIPCIÓN:
+  Burbuja de mensaje para el historial de chat. Conmuta dinámicamente alineación,
+  fondo y visibilidad según sea mensaje enviado o recibido.
+
+  ARCHIVOS RELACIONADOS:
+  - ChatAdapter.java          -> Vincula contenido y emisor.
+  - Message.java              -> Entidad de mensaje individual.
+  - ConversacionFragment.java -> Pantalla que contiene historial.
+  ============================================================================
+-->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="4dp"
+    android:paddingBottom="4dp">
+
+    <TextView
+        android:id="@+id/tvMessageMe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_message_me"
+        android:maxWidth="280dp"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="10dp"
+        android:text="Hola, ¿sigue disponible?"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginEnd="8dp"/>
+
+    <TextView
+        android:id="@+id/tvTimeMe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10:30 AM"
+        android:textColor="@color/text_muted"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/tvMessageMe"
+        app:layout_constraintTop_toBottomOf="@+id/tvMessageMe"
+        android:layout_marginTop="2dp"/>
+
+    <TextView
+        android:id="@+id/tvMessageOther"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_message_other"
+        android:maxWidth="280dp"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="10dp"
+        android:text="Sí, claro."
+        android:textColor="@color/text_primary"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="8dp"/>
+
+    <TextView
+        android:id="@+id/tvTimeOther"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10:31 AM"
+        android:textColor="@color/text_muted"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="@+id/tvMessageOther"
+        app:layout_constraintTop_toBottomOf="@+id/tvMessageOther"
+        android:layout_marginTop="2dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

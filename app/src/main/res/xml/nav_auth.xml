@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ============================================================================
+  Company:       Vesta
+  File:          nav_auth.xml
+  Layer:         Navigation Graph (Jetpack Navigation)
+  ============================================================================
+
+  DESCRIPCIÓN:
+  Grafo principal de navegación de la aplicación. Define destinos de autenticación,
+  dashboards por rol, detalle de inmueble, mapas, mensajería y configuración.
+
+  ARCHIVOS RELACIONADOS:
+  - MainActivity.java            -> Aloja el NavHostFragment.
+  - LoginFragment.java           -> Destino inicial de arranque.
+  - AgenteDashboardFragment.java -> Destino principal de agente.
+  - GerenteDashboardFragment.java-> Destino principal de gerente.
+  ============================================================================
+-->
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_auth"
+    app:startDestination="@id/loginFragment">
+
+    <!-- LOGIN Y REGISTRO -->
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.inmueblecheck.ui.auth.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_gerenteDashboardFragment"
+            app:destination="@id/gerenteDashboardFragment"
+            app:popUpTo="@id/nav_auth"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_loginFragment_to_agenteDashboardFragment"
+            app:destination="@id/agenteDashboardFragment"
+            app:popUpTo="@id/nav_auth"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.inmueblecheck.ui.auth.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register">
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <!--  ARRENDADOR  -->
+    <fragment
+        android:id="@+id/gerenteDashboardFragment"
+        android:name="com.example.inmueblecheck.ui.inmuebles.GerenteDashboardFragment"
+        android:label="Mis Propiedades"
+        tools:layout="@layout/fragment_gerente_dashboard">
+        <action
+            android:id="@+id/action_gerenteDashboardFragment_to_crearInmuebleFragment"
+            app:destination="@id/crearInmuebleFragment" />
+        <action
+            android:id="@+id/action_gerente_to_detalle"
+            app:destination="@id/detalleInmuebleFragment" />
+
+    </fragment>
+
+    <!-- CREAR / EDITAR INMUEBLE -->
+    <fragment
+        android:id="@+id/crearInmuebleFragment"
+        android:name="com.example.inmueblecheck.ui.inmuebles.CrearInmuebleFragment"
+        android:label="Publicar Inmueble"
+        tools:layout="@layout/fragment_crear_inmueble">
+        <argument
+            android:name="editInmuebleId"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+
+    <!-- DASHBOARD ARRENDATARIO -->
+    <fragment
+        android:id="@+id/agenteDashboardFragment"
+        android:name="com.example.inmueblecheck.ui.inmuebles.AgenteDashboardFragment"
+        android:label="Catálogo"
+        tools:layout="@layout/fragment_agente_dashboard">
+        <action
+            android:id="@+id/action_agente_to_detalle"
+            app:destination="@id/detalleInmuebleFragment" />
+
+    </fragment>
+
+    <!-- DETALLE DEL INMUEBLE  -->
+    <fragment
+        android:id="@+id/detalleInmuebleFragment"
+        android:name="com.example.inmueblecheck.ui.inmuebles.DetalleInmuebleFragment"
+        android:label="Detalle"
+        tools:layout="@layout/fragment_detalle_inmueble">
+        <argument
+            android:name="inmuebleId"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/mapaFragment"
+        android:name="com.example.inmueblecheck.ui.inmuebles.MapaFragment"
+        android:label="Mapa de Propiedades"
+        tools:layout="@layout/fragment_mapa">
+        <action
+            android:id="@+id/action_mapa_to_detalle"
+            app:destination="@id/detalleInmuebleFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.example.inmueblecheck.ui.config.AboutFragment"
+        android:label="Acerca de"
+        tools:layout="@layout/fragment_about" />
+
+    <fragment
+        android:id="@+id/historialFragment"
+        android:name="com.example.inmueblecheck.ui.inmuebles.HistorialFragment"
+        android:label="Historial"
+        tools:layout="@layout/fragment_gerente_dashboard" />
+
+    <fragment
+        android:id="@+id/listaChatsFragment"
+        android:name="com.example.inmueblecheck.ui.chat.ListaChatsFragment"
+        android:label="Mensajes"
+        tools:layout="@layout/fragment_lista_chats"/>
+
+    <fragment
+        android:id="@+id/conversacionFragment"
+        android:name="com.example.inmueblecheck.ui.chat.ConversacionFragment"
+        android:label="Chat"
+        tools:layout="@layout/fragment_chat">
+        <argument android:name="chatId" app:argType="string"/>
+        <argument android:name="titulo" app:argType="string"/>
+    </fragment>
+
+    <!-- NUEVA PANTALLA DE CONFIGURACIÓN -->
+    <fragment
+        android:id="@+id/configuracionFragment"
+        android:name="com.example.inmueblecheck.ui.config.ConfiguracionFragment"
+        android:label="Configuración"
+        tools:layout="@layout/fragment_configuracion" />
+
+    <action
+        android:id="@+id/action_global_conversacionFragment"
+        app:destination="@id/conversacionFragment" />
+
+</navigation>

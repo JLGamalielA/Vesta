@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ============================================================================
+  Company:       Vesta
+  File:          activity_main_drawer_arrendador.xml
+  Layer:         Resources / Menu (Menú Lateral - Arrendador)
+  ============================================================================
+
+  DESCRIPCIÓN:
+  Estructura de opciones del panel de navegación lateral para usuarios en
+  rol de arrendador o administrador.
+
+  ARCHIVOS RELACIONADOS:
+  - MainActivity.java -> Opciones de navegación secundaria.
+  - nav_auth.xml      -> Enlaza con destinos ID.
+  ============================================================================
+-->
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_mis_propiedades"
+            android:icon="@drawable/ic_home_black"
+            android:title="Mis Propiedades" />
+        <item
+            android:id="@+id/nav_crear_inmueble"
+            android:icon="@drawable/ic_add"
+            android:title="Agregar Inmueble" />
+        <item
+            android:id="@+id/nav_historial"
+            android:icon="@android:drawable/ic_menu_recent_history"
+            android:title="Historial (Rentados/Vendidos)" />
+        <item
+            android:id="@+id/nav_mensajes"
+            android:icon="@android:drawable/ic_dialog_email"
+            android:title="Mensajes" />
+    </group>
+
+    <item android:title="Más">
+        <menu>
+            <item
+                android:id="@+id/nav_about"
+                android:icon="@android:drawable/ic_menu_info_details"
+                android:title="Acerca de" />
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/logout"
+                android:title="Salir" />
+        </menu>
+    </item>
+</menu>

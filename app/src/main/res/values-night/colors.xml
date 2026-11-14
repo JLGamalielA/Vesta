@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ============================================================================
+  Company:       Vesta
+  File:          colors.xml (values-night)
+  Layer:         Resources / Design System Tokens (Modo Oscuro)
+  ============================================================================
+
+  DESCRIPCIÓN:
+  Paleta semántica adaptada para Modo Oscuro (Dark Theme).
+
+  ARCHIVOS RELACIONADOS:
+  - values/colors.xml        -> Equivalente en modo claro.
+  - values-night/themes.xml  -> Aplica tokens al tema oscuro.
+  ============================================================================
+-->
+<resources>
+    <!-- Colores Base -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="white_80">#CCFFFFFF</color>
+    <color name="transparent">#00000000</color>
+
+    <!-- Marca (Colores Primarios Adaptados a Fondo Oscuro) -->
+    <color name="blue_primary">#3B82F6</color>
+    <color name="blue_primary_dark">#2563EB</color>
+    <color name="blue_primary_light">#1E3A8A</color>
+    <color name="blue_primary_container">#1E293B</color>
+
+    <!-- Superficies y Fondos Modo Oscuro (Slate 900 / Slate 800) -->
+    <color name="background_app">#0F172A</color>
+    <color name="surface_card">#1E293B</color>
+    <color name="surface_variant">#334155</color>
+    <color name="divider_line">#334155</color>
+    <color name="border_light">#475569</color>
+
+    <!-- Tipografía / Textos con Alto Contraste Ergonomico -->
+    <color name="text_primary">#F8FAFC</color>
+    <color name="text_secondary">#94A3B8</color>
+    <color name="text_muted">#64748B</color>
+    <color name="gray_text">#94A3B8</color>
+    <color name="gray_hint">#64748B</color>
+
+    <!-- Estados (Disponible, Rentado/Vendido, Cancelado/Error) -->
+    <color name="status_available">#34D399</color>
+    <color name="status_available_bg">#064E3B</color>
+    <color name="status_pending">#FBBF24</color>
+    <color name="status_pending_bg">#78350F</color>
+    <color name="status_danger">#F87171</color>
+    <color name="status_danger_bg">#7F1D1D</color>
+
+    <!-- Chat y Mensajería Modo Oscuro -->
+    <color name="chat_bubble_me">#3B82F6</color>
+    <color name="chat_bubble_other">#1E293B</color>
+</resources>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ============================================================================
+  Company:       Vesta
+  File:          fragment_configuracion.xml
+  Layer:         Resources / Layout (Configuración y Perfil)
+  ============================================================================
+
+  DESCRIPCIÓN:
+  Pantalla de ajustes del usuario. Muestra información de perfil, botón para
+  solicitar ascenso de rol, acceso a información de la app y cierre de sesión.
+
+  ARCHIVOS RELACIONADOS:
+  - ConfiguracionFragment.java -> Controlador de la pantalla.
+  - fragment_about.xml         -> Destino botón acerca de.
+  - User.java                  -> Entidad con datos mostrados.
+  ============================================================================
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@color/background_app"
+    android:gravity="center_horizontal">
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="32dp"
+        android:src="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/tvConfigUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Cargando nombre..."
+        android:textColor="@color/text_primary"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvConfigUserEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="cargando@correo.com"
+        android:textColor="@color/text_secondary"
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="32dp"
+        android:background="@color/divider_line" />
+
+    <Button
+        android:id="@+id/btnConfigUpgrade"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Convertirme en Arrendador"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btnConfigAbout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="16dp"
+        android:text="Acerca de VESTA" />
+
+    <Button
+        android:id="@+id/btnConfigLogout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="16dp"
+        android:text="Cerrar Sesión" />
+
+</LinearLayout>
