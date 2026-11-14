@@ -1,0 +1,20 @@
+*.iml
+.gradle/
+/local.properties
+local.properties
+
+# Android Studio user-specific settings
+.idea/
+
+# Android build outputs
+/build/
+**/build/
+/captures/
+.externalNativeBuild/
+.cxx/
+
+# Firebase local configuration
+app/google-services.json
+
+# OS files
+.DS_Store
